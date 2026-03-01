@@ -12,16 +12,17 @@ namespace WhiteBit.Net.Objects.Models
     public record WhiteBitAccountFundingHistories
     {
         /// <summary>
-        /// Total
+        /// Offset
         /// </summary>
         [JsonPropertyName("offset")]
         public int Offset { get; set; }
 
         /// <summary>
-        /// Total
+        /// Limit
         /// </summary>
         [JsonPropertyName("limit")]
         public int Limit { get; set; }
+
         /// <summary>
         /// Records
         /// </summary>
@@ -39,15 +40,21 @@ namespace WhiteBit.Net.Objects.Models
         /// </summary>
         [JsonPropertyName("fundingTime")]
         public DateTime FundingTime { get; set; }
+
         /// <summary>
         /// Funding rate
         /// </summary>
         [JsonPropertyName("fundingRate")]
         public decimal FundingRate { get; set; }
 
+        /// <summary>
+        /// Funding amount
+        /// </summary>
         [JsonPropertyName("fundingAmount")]
         public decimal FundingAmount { get; set; }
-
+        /// <summary>
+        /// Position amount
+        /// </summary>
         [JsonPropertyName("positionAmount")]
         public decimal PositionAmount { get; set; }
 
@@ -56,11 +63,13 @@ namespace WhiteBit.Net.Objects.Models
         /// </summary>
         [JsonPropertyName("settlementPrice")]
         public decimal SettlePrice { get; set; }
+
         /// <summary>
         /// Funding rate calculation time
         /// </summary>
         [JsonPropertyName("rateCalculatedTime")]
         public DateTime FundingCalcTime { get; set; }
+
         /// <summary>
         /// Symbol name
         /// </summary>
